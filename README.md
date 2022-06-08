@@ -3,6 +3,12 @@ Map of powerlines in Switzerland built with Planetiler's declarative schema appr
 
 This is the same map as https://github.com/wipfli/powerlines-switzerland but this time we use Planetiler's declarative schema approach.
 
+[Demo](https://wipfli.github.io/declarative-powerlines-switzerland/)
+
+<a href="https://wipfli.github.io/declarative-powerlines-switzerland">
+    <img src="demo.png" />
+</a>
+
 ## Generate Tiles
 
 Open `power.yml` and fill it with:
