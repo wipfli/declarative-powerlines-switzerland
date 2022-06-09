@@ -3,6 +3,11 @@ Map of powerlines in Switzerland built with Planetiler's declarative schema appr
 
 This is the same map as https://github.com/wipfli/powerlines-switzerland but this time we use Planetiler's declarative schema approach.
 
+More about delarative schemas in Planetiler:
+
+* README: https://github.com/onthegomap/planetiler/tree/main/planetiler-custommap
+* Examples: https://github.com/onthegomap/planetiler/tree/main/planetiler-custommap/src/main/resources/samples
+
 [Demo](https://wipfli.github.io/declarative-powerlines-switzerland/)
 
 <a href="https://wipfli.github.io/declarative-powerlines-switzerland">
