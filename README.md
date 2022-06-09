@@ -9,52 +9,22 @@ This is the same map as https://github.com/wipfli/powerlines-switzerland but thi
     <img src="demo.png" />
 </a>
 
-## Generate Tiles
+## Generate tiles
 
-Open `power.yml` and fill it with:
-
-```yml
-schema_name: Power
-schema_description: Features that represent electrical power grid
-attribution: <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy;
-  OpenStreetMap contributors</a>
-sources:
-  osm:
-    type: osm
-    url: geofabrik:switzerland
-layers:
-- name: power
-  features:
-  - sources:
-    - osm
-    geometry: line
-    min_zoom: 6
-    include_when:
-      power:
-      - line
-    attributes:
-    - key: power
-```
-
-Clone Planetiler
+Clone this repo:
 
 ```
-git clone git@github.com:onthegomap/planetiler.git
-```
-
-Install Java 16+, see https://github.com/onthegomap/planetiler/blob/main/CONTRIBUTING.md
-
-Compile Planetiler:
-
-```
-/mvnw clean package
+git clone git@github.com:wipfli/declarative-powerlines-switzerland.git
+cd declarative-powerlines-switzerland
 ```
 
 Run Planetiler:
 
 ```
-java -jar planetiler-dist/target/*-with-deps.jar generate-custom --schema=power.yml --download
+docker run -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/power.yml --download
 ```
+
+This will download about 1 GB of assets from natural earth, geofabrik, and other sources.
 
 Install PMTiles python package:
 
@@ -62,8 +32,8 @@ Install PMTiles python package:
 pip3 install pmtiles
 ```
 
-Convert `data/output.mbtiles` to `data/output.pmtiles`:
+Convert `data/output.mbtiles` to `output.pmtiles`:
 
 ```
-pmtiles-convert data/output.mbtiles data/output.pmtiles
+pmtiles-convert data/output.mbtiles output.pmtiles
 ```
