@@ -29,8 +29,6 @@ Run Planetiler:
 docker run -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:latest generate-custom --schema=/data/power.yml --download
 ```
 
-This will download about 1 GB of assets from natural earth, geofabrik, and other sources.
-
 Install PMTiles python package:
 
 ```
