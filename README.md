@@ -40,3 +40,7 @@ Convert `data/output.mbtiles` to `output.pmtiles`:
 ```
 pmtiles-convert data/output.mbtiles output.pmtiles
 ```
+
+## Serve website locally
+
+This map website and the `.pmtiles` file can be served locally. I recommend using something like `npx serve .` as an easy webserver. `npx` is installed with `node` and `npm`, see https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. 
